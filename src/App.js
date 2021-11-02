@@ -3,7 +3,7 @@ import './App.css';
 import Particles from 'react-particles-js';
 import Clarifai from 'clarifai';
 import {tsParticles} from "tsparticles";
-
+import Signin from './components/Signin/Signin';
 import Navigation from './components/Navigation/Navigation';
 import Logo from './components/Logo/Logo';
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
@@ -12,7 +12,7 @@ import FaceRecognition from './components/FaceRecognition/FaceRecognition';
 
 //You must add your own API key here from Clarifai.
 const app = new Clarifai.App({
- apiKey: ''
+ apiKey: '72a089a617004080a1f5cc042ae15052'
 });
 
 const particlesOptions = {
@@ -84,6 +84,7 @@ class App extends Component {
         />
       
         <Navigation />
+        <Signin/>
         <Logo />
         <Rank />
         <ImageLinkForm onInputChange={this.onInputChange} onSubmit={this.onButtonSubmit} />
